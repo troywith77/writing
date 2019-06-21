@@ -1,6 +1,5 @@
 {
   "name": "gatsby-starter-hello-world",
-  "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
   "version": "0.1.0",
   "license": "MIT",
@@ -11,6 +10,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "deploy": "gh-pages -d public",
+    "release": "npm run build && npm run deploy",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
