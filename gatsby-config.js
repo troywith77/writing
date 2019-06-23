@@ -6,5 +6,17 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: '/writing'
+  pathPrefix: '/writing',
+  siteMetadata: {
+    title: `Pandas Eating Alot`,
+  },
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    'gatsby-plugin-emotion'
+  ]
 }
