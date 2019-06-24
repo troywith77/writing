@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import Layout from '../components/layout'
@@ -25,7 +25,9 @@ export default ({ data }) => {
                 margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              {node.frontmatter.title}{" "}
+              <Link to={node.fields.slug}>
+                {node.frontmatter.title}{" "}
+              </Link>
               <span
                 css={css`
                   color: #bbb;
@@ -48,14 +50,15 @@ export const query = graphql`
       totalCount
       edges {
         node {
+          fields {
+            slug
+          }
           id
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
           }
           excerpt
-          html
-          timeToRead
         }
       }
     }
