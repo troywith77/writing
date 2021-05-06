@@ -1,10 +1,10 @@
-import React from "react"
-import { css } from "@emotion/core"
-import { useStaticQuery,  graphql, Link } from "gatsby"
+import React from 'react';
+import {css} from '@emotion/core';
+import {useStaticQuery, graphql, Link} from 'gatsby';
 
-import { rhythm } from "../utils/typography"
+import {rhythm} from '../utils/typography';
 
-export default ({ children }) => {
+export default ({children}) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -15,7 +15,7 @@ export default ({ children }) => {
         }
       }
     `
-  )
+  );
   return (
     <div
       css={css`
@@ -46,6 +46,5 @@ export default ({ children }) => {
       </Link>
       {children}
     </div>
-  )
-
-}
+  );
+};

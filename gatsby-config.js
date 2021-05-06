@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   pathPrefix: '/writing',
   siteMetadata: {
-    title: `Pandas Eating Alot`,
+    title: `Ray's Blog`,
   },
   plugins: [
     {
@@ -25,6 +25,6 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
-    'gatsby-plugin-emotion'
-  ]
-}
+    'gatsby-plugin-emotion',
+  ],
+};

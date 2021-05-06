@@ -1,8 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "writings",
   "version": "0.1.0",
-  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -10,7 +8,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "fix.prettier": "prettier --write src/**/*"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",
