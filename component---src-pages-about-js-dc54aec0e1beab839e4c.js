@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{"3XHS":function(t,e,b){"use strict";b.r(e);b("q1tI");var a=b("qKvR"),n=function(t){var e=t.headerText;return Object(a.b)("h1",null,e)},c=b("Bl7J");e.default=function(t){var e=t.data;return Object(a.b)(c.a,null,Object(a.b)("h1",null,"About ",e.site.siteMetadata.title),Object(a.b)("div",null,Object(a.b)(n,{headerText:"About Gatsby"}),Object(a.b)(n,{headerText:"It's pretty cool."}),Object(a.b)("p",null,"Such wow. Very React.")))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-dc54aec0e1beab839e4c.js.map
