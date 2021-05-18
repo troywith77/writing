@@ -6,7 +6,7 @@
 
 module.exports = {
   /* Your site config here */
-  pathPrefix: '/writing',
+  // pathPrefix: '/writing',
   siteMetadata: {
     title: `Ray's Blog`,
   },
