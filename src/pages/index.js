@@ -14,7 +14,7 @@ export default ({data}) => {
             border-bottom: 1px solid;
           `}
         >
-          Amazing Pandas Eating Things
+          {data.site.siteMetadata.slogan}
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({node}) => (
@@ -57,6 +57,13 @@ export const query = graphql`
           }
           excerpt
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
+        author
+        slogan
       }
     }
   }

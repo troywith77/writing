@@ -5,11 +5,9 @@ import Layout from '../components/layout';
 
 export default ({data}) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1>
+    <Header headerText={`About ${data.site.siteMetadata.author}`} />
     <div>
-      <Header headerText={`About Gatsby`} />
-      <Header headerText={`It's pretty cool.`} />
-      <p>Such wow. Very React.</p>
+      <p>Such wow.</p>
     </div>
   </Layout>
 );
@@ -19,6 +17,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        author
       }
     }
   }

@@ -9,6 +9,8 @@ module.exports = {
   // pathPrefix: '/writing',
   siteMetadata: {
     title: `Ray's Blog`,
+    author: 'Ray',
+    slogan: 'JUST DIFFERENT',
   },
   plugins: [
     {
@@ -24,7 +26,12 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        excerpt_separator: `<!-- excerpt -->`,
+      },
+    },
     'gatsby-plugin-emotion',
   ],
 };
