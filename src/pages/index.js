@@ -4,6 +4,8 @@ import {css} from '@emotion/core';
 import {rhythm} from '../utils/typography';
 import Layout from '../components/layout';
 
+const getCoffeeCups = (minute) => Math.floor(minute / 5) + 1;
+
 export default ({data}) => {
   return (
     <Layout>
@@ -24,14 +26,26 @@ export default ({data}) => {
                 margin-bottom: ${rhythm(1 / 4)};
               `}
             >
-              <Link to={node.fields.slug}>{node.frontmatter.title} </Link>
-              <span
+              <div
                 css={css`
-                  color: #bbb;
+                  margin-bottom: ${rhythm(1 / 4)};
                 `}
               >
-                — {node.frontmatter.date}
-              </span>
+                <Link to={node.fields.slug}>{node.frontmatter.title} </Link>
+              </div>
+              <div>
+                <span
+                  css={css`
+                    color: #bbb;
+                    font-size: 1rem;
+                  `}
+                >
+                  {node.frontmatter.date}
+                  {'  -  '}
+                  {Array(getCoffeeCups(node.timeToRead)).fill('☕️')}{' '}
+                  {node.timeToRead} min read
+                </span>
+              </div>
             </h3>
             <p>{node.excerpt}</p>
           </div>
@@ -56,6 +70,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
           }
           excerpt
+          timeToRead
         }
       }
     }
